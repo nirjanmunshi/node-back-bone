@@ -58,11 +58,6 @@ router.put("/:id", (req, res) => {
         res.json({ msg: "Member updated", member: m });
       }
     });
-    console.dir(res.headersSent);
-    res.json(
-      memberList.filter((member) => member.id === parseInt(req.params.id))
-    );
-    console.dir(res.headersSent);
   } else {
     res
       .status(404)
